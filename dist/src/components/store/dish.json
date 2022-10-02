@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_store_dishes",
+    "info": {
+        "displayName": "Dish"
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "richtext"
+        },
+        "thumbnail": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": true
+        },
+        "price": {
+            "type": "decimal",
+            "default": 0
+        }
+    }
+}

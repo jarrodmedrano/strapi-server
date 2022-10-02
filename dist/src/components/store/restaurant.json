@@ -1,0 +1,32 @@
+{
+    "collectionName": "components_store_restaurants",
+    "info": {
+        "displayName": "Restaurant",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "richtext"
+        },
+        "thumbnail": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "dishes": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::dish.dish"
+        }
+    }
+}
