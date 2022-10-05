@@ -9,15 +9,12 @@
  * @description: A set of functions called "actions" for managing `Order`.
  */
 // note that this needs to be a "private" key from STRIPE
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+const stripe = require("stripe")("sk_test_zovhWaIqvhMYG3FuONCe2M6c");
 module.exports = {
-  /**
-   * Create a/an order record.
-   *
-   * @return {Object}
-   */
-
-  create: async (ctx) => {
+  create: async (ctx: {
+    request: { body: string };
+    state: { user: { _id: any; id: any } };
+  }) => {
     const { address, amount, dishes, token, city, state } = JSON.parse(
       ctx.request.body
     );
